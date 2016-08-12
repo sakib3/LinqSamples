@@ -21,14 +21,19 @@ namespace Features
 				new Employee {Id = 3, Name ="Alex"}
 			};
 
-			foreach (var developer in developers)
+
+			IEnumerator<Employee> enumarator = developers.GetEnumerator();
+
+			while (enumarator.MoveNext())
 			{
-				Console.WriteLine(developer.Name);
+				Console.WriteLine(enumarator.Current.Name);
 			}
 
-			foreach (var employee in sales)
+			IEnumerator<Employee> enumarator2 = sales.GetEnumerator();
+
+			while (enumarator2.MoveNext())
 			{
-				Console.WriteLine(employee.Name);
+				Console.WriteLine(enumarator2.Current.Name);
 			}
 		}
 	}
