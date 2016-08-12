@@ -14,7 +14,8 @@ namespace Features
 			IEnumerable<Employee> developers = new Employee[]
 			{
 				new Employee {Id = 1, Name = "Scott"},
-				new Employee {Id = 2, Name = "Chris"}
+				new Employee {Id = 2, Name = "Christian"},
+				new Employee {Id = 3, Name = "Alibö"}
 			};
 
 			IEnumerable<Employee> sales = new List<Employee>()
@@ -40,16 +41,17 @@ namespace Features
 			//Console.WriteLine(developers.Count());
 
 			foreach (var developer in developers
-					.Where(e => e.Name.StartsWith("S"))
+						.Where(e => e.Name.Length == 5)
+						.OrderBy(e => e.Name)
 					){
 					Console.WriteLine(developer.Name);
 			}
 
-			Func<int, int> square = num => num*num;
-			Func<int, int, int> add = (a,b) => a+b;
-			Console.WriteLine(square(3));
-			Action<int> write = num => Console.WriteLine(num);
-			write(add(1,5));
+			//Func<int, int> square = num => num*num;
+			//Func<int, int, int> add = (a,b) => a+b;
+			//Console.WriteLine(square(3));
+			//Action<int> write = num => Console.WriteLine(num);
+			//write(add(1,5));
 		}
 
 		//private static bool NameStartsWithS(Employee employee)
