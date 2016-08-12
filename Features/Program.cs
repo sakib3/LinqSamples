@@ -40,9 +40,7 @@ namespace Features
 			//Console.WriteLine(developers.Count());
 
 			foreach (var developer in developers
-					.Where(delegate(Employee employee){
-								return employee.Name.StartsWith("S");
-							})
+					.Where(e => e.Name.StartsWith("S"))
 					){
 					Console.WriteLine(developer.Name);
 			}
