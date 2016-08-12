@@ -21,6 +21,15 @@ namespace Features
 				new Employee {Id = 3, Name ="Alex"}
 			};
 
+			foreach (var developer in developers)
+			{
+				Console.WriteLine(developer.Name);
+			}
+
+			foreach (var employee in sales)
+			{
+				Console.WriteLine(employee.Name);
+			}
 		}
 	}
 }
