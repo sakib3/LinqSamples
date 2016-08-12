@@ -48,7 +48,8 @@ namespace Features
 			Func<int, int> square = num => num*num;
 			Func<int, int, int> add = (a,b) => a+b;
 			Console.WriteLine(square(3));
-			Console.WriteLine(add(1,5));
+			Action<int> write = num => Console.WriteLine(num);
+			write(add(1,5));
 		}
 
 		//private static bool NameStartsWithS(Employee employee)
