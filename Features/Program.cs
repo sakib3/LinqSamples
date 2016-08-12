@@ -35,6 +35,8 @@ namespace Features
 			{
 				Console.WriteLine(enumarator2.Current.Name);
 			}
+			//use from extension method Count
+			Console.WriteLine(developers.Count());
 		}
 	}
 }
